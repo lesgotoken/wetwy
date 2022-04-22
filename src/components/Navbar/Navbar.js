@@ -23,7 +23,6 @@ import * as s from "../../styles/globalStyles";
 
 
 const Navbar = () => {
-    const [scrollNav,setScrollNav] = useState(false);
     const changeNav = () => {
       if(window.scrollY>=100){
         setScrollNav(true)
@@ -88,7 +87,6 @@ const Navbar = () => {
       getData();
     }, [blockchain.account]);
     const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
 
     const toggleHome = () => {
       scroll.scrollToTop();
@@ -99,7 +97,7 @@ const Navbar = () => {
     }
 
     const homeLink = () =>{
-      window.location.replace("https://cosmoboynft.com")
+      window.location.replace("https://toppemsports.io/")
     }
 
     return (
@@ -119,11 +117,6 @@ const Navbar = () => {
                 <NavItems style={{paddingLeft:"20px"}}>
                   <NavLink onClick={()=>socialMedia(" https://www.instagram.com/")}>
                     <NavIcon src={"config/images/instagram.png"}></NavIcon>
-                  </NavLink>
-                </NavItems>
-                <NavItems style={{paddingLeft:"0px"}}>
-                  <NavLink onClick={()=> socialMedia(" https://discord.gg/")}>
-                    <NavIcon src={"config/images/discord.png"}></NavIcon>
                   </NavLink>
                 </NavItems>
                 <NavItems style={{paddingLeft:"0px"}}>
